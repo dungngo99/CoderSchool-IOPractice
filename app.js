@@ -1,5 +1,6 @@
 const fs = require('fs')
 const yargs = require('yargs')
+const c = require('chalk')
 
 const loadTodos = () => {
   try {
@@ -19,7 +20,11 @@ const loadTodos = () => {
 
 const displayTodos = (todos) => {
   for (const todo of todos) {
-    console.log(todo);
+    if (todo.complete === false){
+      console.log(c.blue(`Todo's id: ${todo.id} - Content: ${todo.todo}. `) + c.red(`Is completed? ${todo.complete}`))
+    }else{
+      console.log(c.blue(`Todo's id: ${todo.id} - Content: ${todo.todo}. `) + c.green(`Is completed? ${todo.complete}`))
+    }
   }
 }
 

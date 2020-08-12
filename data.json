@@ -1,1 +1,6 @@
-[{ "id": 2, "todo": "Have breakfast", "complete": true }]
+[
+  { "id": 2, "todo": "Have breakfast", "complete": true },
+  { "id": 3, "todo": "Have", "complete": false },
+  { "id": 4, "todo": "Have dinner", "complete": false },
+  { "id": 5, "todo": "Have breakfast", "complete": false }
+]
